@@ -13,13 +13,13 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ## Table of Contents
 
-### Module 0: Setup - Proof of Life
+### [Module 0: Setup - Proof of Life](https://github.com/millecodex/ArduinoRobotics/blob/main/Module_00.md)
 - Connecting the Arduino board
 - Verifying board communication
 - Navigating the Arduino IDE (Integrated Development Environment)
 - Understanding serial ports
 
-### Module 1: Turn Out the Lights - The "Blink" Sketch
+### [Module 1: Turn Out the Lights - The "Blink" Sketch](https://github.com/millecodex/ArduinoRobotics/blob/main/Module_01.md)
 - Introduction to Arduino programming structure: `setup()` and `loop()`
 - Controlling digital outputs: `pinMode()`, `digitalWrite()`
 - Introducing timing: `delay()`
