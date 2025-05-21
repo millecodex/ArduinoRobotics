@@ -19,13 +19,13 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Navigating the Arduino IDE (Integrated Development Environment)
 - Understanding serial ports
 
-### [Module 1: Turn Out the Lights - The "Blink" Sketch](https://github.com/millecodex/ArduinoRobotics/blob/main/Module_01.md)
+### [Module 1: Turn Out the Lights - The "Blink" Sketch](https://github.com/millecodex/ArduinoRobotics/blob/main/module_01.md)
 - Introduction to Arduino programming structure: `setup()` and `loop()`
 - Controlling digital outputs: `pinMode()`, `digitalWrite()`
 - Introducing timing: `delay()`
 - Your first circuit: Blinking an LED
 
-### Module 1b: Using a Breadboard and an External LED
+### [Module 1b: Using a Breadboard and an External LED](https://github.com/millecodex/ArduinoRobotics/blob/main/module_01b.md)
 
 ### Module 2: Sensing the World - Ultrasonic Obstacle Detection
 - Introduction to sensors
