@@ -59,9 +59,12 @@ void loop() {
   - `delay(800);`: This pauses the program for 800 milliseconds, keeping the LED on for that duration.  
   - `digitalWrite(ledPin, LOW);`: This command sets the voltage on `ledPin` to `LOW` (approximately 0V), turning the LED off.  
   - `delay(400);`: This pauses the program for 400 milliseconds, keeping the LED off for that duration.
-## **Exercises and Questions**
 
+## **Exercises and Questions**
 1. Upload the Module\_1b\_breadboard\_LED.ino sketch to your Arduino board. Observe the blinking pattern of your external LED.  
 2. Experiment with changing the delay() values. How does increasing or decreasing these values affect the blinking speed and pattern?  
 3. Try connecting the LED to a different digital pin (e.g., pin 7\) and update the ledPin constant in your code accordingly. Does the LED still blink as expected?  
-4. **Critical Thinking:** What would happen if you omitted the resistor in your LED circuit? Why is it important to include it?
+4. Critical Thinking: What would happen if you omitted the resistor in your LED circuit? Why is it important to include it?
+
+### Fun Fact
+The first commercially available Light Emitting Diode (LED) that emitted visible light was red, developed in 1962 by Nick Holonyak Jr. While LEDs are now ubiquitous, it took decades of research to develop the blue LED, which was essential for creating white light LEDs and enabling technologies like LED screens and energy-efficient lighting!
