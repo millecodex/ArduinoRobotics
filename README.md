@@ -23,11 +23,11 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Introduction to Arduino programming structure: `setup()` and `loop()`
 - Controlling digital outputs: `pinMode()`, `digitalWrite()`
 - Introducing timing: `delay()`
-- Your first circuit: Blinking an LED
 
 ### [Module 1b: Using a Breadboard and an External LED](https://github.com/millecodex/ArduinoRobotics/blob/main/module_01b.md)
+- To the breadboards! Blinking an LED
 
-### Module 2: Sensing the World - Ultrasonic Obstacle Detection
+### [Module 2: Sensing the World - Ultrasonic Obstacle Detection](https://github.com/millecodex/ArduinoRobotics/blob/main/module_02.md)
 - Introduction to sensors
 - Principles of ultrasonic distance measurement (echolocation)
 - Interfacing with the HC-SR04 ultrasonic sensor
