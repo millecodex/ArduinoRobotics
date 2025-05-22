@@ -36,13 +36,13 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ### Module 2b: Creating a Reusable Distance Function
 
-### Module 3: Movement - Motor Control
+### [Module 3: Movement - Motor Control](https://github.com/millecodex/ArduinoRobotics/blob/main/module_03.md)
 - Introduction to DC motors
-- Controlling motors with digital signals (On/Off)
-- Using an H-Bridge motor driver (e.g., L298N)
+- Using the Arduino Motor Shield
 - Understanding the need for a separate power supply for motors
 
-### Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)
+### [Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)](https://github.com/millecodex/ArduinoRobotics/blob/main/module_03b.md)
+- something here
 
 ### Module 4: Precision Movement - Servo Control
 - Introduction to servo motors
