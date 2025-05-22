@@ -44,14 +44,15 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 ### [Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)](https://github.com/millecodex/ArduinoRobotics/blob/main/module_03b.md)
 - something here
 
-### Module 4: Precision Movement - Servo Control
+### [Module 4: Precision Movement - Servo Control](https://github.com/millecodex/ArduinoRobotics/blob/main/module_04.md)
 - Introduction to servo motors
 - Understanding positional control
 - Interfacing with an SG90 servo motor
 - Using the Arduino Servo library
 
-### Module 4b: Creating a Servo Scanning Mechanism
-
+### [Module 4b: Sweeping the field]()
+- something here
+  
 ### Module 5: Bringing It All Together - The Car Build
 - Mechanical assembly of a robot car chassis
 - Integrating motors, sensors, and the Arduino
