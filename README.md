@@ -50,7 +50,7 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Interfacing with an SG90 servo motor
 - Using the Arduino Servo library
 
-### [Module 4b: Sweeping the field]()
+### [Module 4b: Sweeping the field](https://github.com/millecodex/ArduinoRobotics/blob/main/module_4b.md)
 - something here
   
 ### Module 5: Bringing It All Together - The Car Build
