@@ -1,4 +1,4 @@
-# Module 4: Servo Control - Positional Movement
+# Module 4: Servo Control - Sweep the Floor
 
 Having mastered controlling basic LEDs and driving DC motors for continuous movement, we now delve into the world of **servo motors**. Unlike the DC motors you've encountered, standard servo motors are specifically designed for **precise positional control**. This capability is invaluable in robotics for tasks demanding accuracy, such as manipulating robotic arms, controlling steering systems, or stabilizing camera platforms.
 
@@ -71,11 +71,16 @@ It's important to remember that standard SG90 servos are **positional servos**, 
 
 ## Exercises and Questions
 
-1.  Connect your SG90 servo motor to your Arduino Uno as outlined in the "SG90 Micro Servo Motor Pin Setup" section. Upload the "Basic Servo Control Code" sketch. Carefully observe the servo's movement as it cycles through 0, 90, and 180 degrees.
-2.  Experiment with different angle values in `myServo.write()`. For instance, try `myServo.write(45);` or `myServo.write(135);`. How does the servo respond to these intermediate angles?
-3.  Adjust the `delay()` values between movements. What distinct differences do you observe if you make the delays very short (e.g., 100ms)? What if they are significantly longer (e.g., 5000ms)?
-4.  **Critical Thinking:** If a robotics project required a motor that could spin continuously without angle limits (e.g., for driving wheels), would a standard positional servo like the SG90 be a suitable choice? Explain your reasoning. What type of motor, from previous modules, would be more appropriate for continuous rotation, and why?
+1.  **Sweep Timing and Prediction:** Upload the "Servo Sweep" sketch to your Arduino. Using a stopwatch, carefully measure the total time it takes for the servo to complete one full sweep cycle (from 0 to 180 and back to 0). Now, without uploading, predict what the new total sweep time would be if you changed `delay(15);` to `delay(5);` within both `for` loops. Upload the modified code and verify your prediction. Explain any discrepancies.
+2.  **Non-Linear Sweep Experiment:** Modify the `for` loops to create a non-linear sweeping motion. For example, make the servo move faster when it's near the center (e.g., 60-120 degrees) and slower when it's approaching the extremes (0-30 degrees or 150-180 degrees). You could achieve this by adjusting the `delay()` based on the `pos` value (e.g., using an `if-else` statement or a mathematical function).
+3.  **Dynamic Sweep Range:** Program the servo to cycle through different sweep ranges automatically. For example, it could sweep:
+    * A narrow range (e.g., 60 to 120 degrees) for 3 seconds.
+    * A medium range (e.g., 30 to 150 degrees) for 3 seconds.
+    * A full range (0 to 180 degrees) for 3 seconds.
+    * Then repeat this sequence indefinitely.
+4.  **Critical Thinking:** Imagine you've attached an ultrasonic sensor (from Module 2) to this sweeping servo. How does this setup fundamentally improve your robot's ability to detect obstacles compared to having the sensor fixed in place? 
+5.  **Advanced Challenge:** Can you modify the code such that the servo sweeps from 0 to 180 degrees at a relatively slow pace, but then sweeps back from 180 to 0 degrees at a much faster pace? Explain the changes you made and why they achieve the desired effect.
 
 ---
 
-**Fun Fact:** The term "servo" has an interesting origin, deriving from the Latin word "servus," which means "slave." In the realm of engineering, a "servo mechanism" is designed to "serve" or "obey" a command with high precision, meticulously controlling a mechanical system's position, velocity, or acceleration. This concept perfectly illustrates how your SG90 servo precisely "obey" your angle commands!
+**Fun Fact:** The concept of sweeping motion for environmental perception has a long history in robotics and engineering, predating modern computing. Early radar systems, for instance, used mechanically sweeping antennas to scan for targets across a wide area. Similarly, some biological systems, like a chameleon's eyes, can independently scan their surroundings to build a comprehensive view, mirroring the functionality you're implementing with your servo!
