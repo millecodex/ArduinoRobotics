@@ -1,4 +1,6 @@
-# Welcome to Arduino Robotics!
+![image](https://github.com/user-attachments/assets/aa95c545-0d3f-4719-aa99-2dad7f86d758)
+
+# Welcome to Arduino Robotics @FutureTechCamp!
 
 ## Course Introduction
 Welcome to the exciting world of Arduino robotics! This course is designed to introduce you to the fundamentals of building and programming your own robots using the versatile Arduino microcontroller platform. Whether you're new to electronics and programming or have some prior experience, this course will provide you with the hands-on skills and theoretical knowledge to bring your robotic creations to life.
