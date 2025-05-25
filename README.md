@@ -21,15 +21,15 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Navigating the Arduino IDE (Integrated Development Environment)
 - Understanding serial ports
 
-### [Module 1: Turn Out the Lights - The "Blink" Sketch](https://github.com/millecodex/ArduinoRobotics/blob/main/module_01.md)
+### [Module 1: Turn Out the Lights - The "Blink" Sketch](module_01.md)
 - Introduction to Arduino programming structure: `setup()` and `loop()`
 - Controlling digital outputs: `pinMode()`, `digitalWrite()`
 - Introducing timing: `delay()`
 
-### [Module 1b: Using a Breadboard and an External LED](https://github.com/millecodex/ArduinoRobotics/blob/main/module_01b.md)
+### [Module 1b: Using a Breadboard and an External LED](module_01b.md)
 - To the breadboards! Blinking an LED
 
-### [Module 2: Sensing the World - Ultrasonic Obstacle Detection](https://github.com/millecodex/ArduinoRobotics/blob/main/module_02.md)
+### [Module 2: Sensing the World - Ultrasonic Obstacle Detection](module_02.md)
 - Introduction to sensors
 - Principles of ultrasonic distance measurement (echolocation)
 - Interfacing with the HC-SR04 ultrasonic sensor
@@ -38,12 +38,12 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ### Module 2b: Creating a Reusable Distance Function
 
-### [Module 3: Movement - Motor Control](https://github.com/millecodex/ArduinoRobotics/blob/main/module_03.md)
+### [Module 3: Movement - Motor Control](module_03.md)
 - Introduction to DC motors
 - Using the Arduino Motor Shield
 - Understanding the need for a separate power supply for motors
 
-### [Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)](https://github.com/millecodex/ArduinoRobotics/blob/main/module_03b.md)
+### [Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)](module_03b.md)
 - something here
 
 ### [Module 4: Precision Movement - Servo Control](https://github.com/millecodex/ArduinoRobotics/blob/main/module_04.md)
@@ -52,15 +52,15 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Interfacing with an SG90 servo motor
 - Using the Arduino Servo library
 
-### [Module 4b: Sweeping the field](https://github.com/millecodex/ArduinoRobotics/blob/main/module_4b.md)
+### [Module 4b: Sweeping the field](module_4b.md)
 - something here
   
-### Module 5: Bringing It All Together - The Car Build
+### [Module 5: Bringing It All Together - The Car Build](module_05.md)
 - Mechanical assembly of a robot car chassis
 - Integrating motors, sensors, and the Arduino
 - Wiring considerations and power management
 
-### Module 6: Intelligence - Algorithm Development and Optimization
+### [Module 6: Intelligence - Algorithm Development and Optimization](module_06.md)
 - Designing basic robot behaviors (e.g., obstacle avoidance)
 - Implementing decision-making in code
 - Strategies for testing and debugging
