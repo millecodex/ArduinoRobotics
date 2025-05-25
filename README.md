@@ -67,7 +67,7 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Optimizing code for efficiency and responsiveness
 - Preparing for the Final Competition!
 
-## What You'll Need (General Overview)
+## What You'll Need (all Materials will be provided)
 - An Arduino Uno (or compatible board)
 - A USB cable to connect the Arduino to your computer
 - A computer with the Arduino IDE installed
@@ -82,6 +82,6 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - A robot car chassis (or materials to build one)
 - A separate power supply for motors (e.g., a battery pack)
 
-*Specific components for each module will be detailed at the beginning of that module.*
+---
 
-Let's begin with **Module 0** and get your Arduino board set up!
+Let's begin with [**Module 0**](module_00.md) and bring your Arduino board to life!
