@@ -114,8 +114,7 @@ Once you've selected the correct board and port, you can verify that the IDE can
 
 ## Questions to Ponder:
 
-1.  What is the main purpose of the Arduino IDE?
-2.  Why is it important to select the correct "Board" and "Port" in the Tools menu?
-3.  What does it mean if the power LED on your Arduino lights up but the "L" LED (pin 13) doesn't blink? (Hint: Not all new boards come with the Blink sketch pre-loaded).
-
-You are now ready to move on to Module 1, where you'll write and upload your first sketch to make an LED blink!
+1.  Why would someone want their own microcontroller board?
+2.  What does it mean if the power LED on your Arduino lights up but the "L" LED (pin 13) doesn't blink?
+---
+NEXT ➡️ You are now ready to move on to [Module 1](./module_01.md), where you'll write and upload your first sketch to make an LED blink!
