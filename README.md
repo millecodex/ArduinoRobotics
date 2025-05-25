@@ -15,7 +15,7 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ## Table of Contents
 
-### [Module 0: Setup - Proof of Life](https://github.com/millecodex/ArduinoRobotics/blob/main/Module_00.md)
+### [Module 0: Setup - Proof of Life](module_00.md)
 - Connecting the Arduino board
 - Verifying board communication
 - Navigating the Arduino IDE (Integrated Development Environment)
