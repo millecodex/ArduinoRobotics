@@ -16,6 +16,7 @@ An Arduino is a microcontroller board. Think of it as a tiny, programmable compu
 * A computer (Windows, macOS, or Linux)
 
 ## Step 1: Download and Install the Arduino IDE
+### (This is already done in the RMIT Windows Lab)
 
 The Arduino IDE is the software you'll use to write code (called "sketches"), compile it, and upload it to your Arduino board.
 
