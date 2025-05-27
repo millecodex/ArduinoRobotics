@@ -20,21 +20,12 @@ An Arduino is a microcontroller board. Think of it as a tiny, programmable compu
 
 The Arduino IDE is the software you'll use to write code (called "sketches"), compile it, and upload it to your Arduino board.
 
-1.  **Go to the official Arduino website:** [www.arduino.cc](https://www.arduino.cc)
-2.  Navigate to the "Software" section.
-3.  Download the latest version of the Arduino IDE suitable for your operating system (Windows, macOS, or Linux).
-4.  Follow the installation instructions provided on the website. For Windows, you might need to install drivers, which usually come bundled with the IDE installer. macOS and Linux typically don't require separate driver installations for common Arduino boards.
+1.  Go to the official Arduino website and download the suitable version for your OS: [www.arduino.cc](https://www.arduino.cc)
 
 ## Step 2: Connect Your Arduino Board
 
-1.  Take your Arduino Uno board and the USB cable.
-2.  Connect the smaller end of the USB cable (Type B) to the USB port on the Arduino board.
-3.  Connect the larger end of the USB cable (Type A) to a free USB port on your computer.
-
-    ![Diagram of Arduino connected to computer via USB](https://www.arduino.cc/en/uploads/Guide/UnoFront.png)
-    *(Image Credit: Arduino.cc - A typical Arduino Uno board)*
-
-    You should see a power LED (often labeled 'ON' or 'PWR') light up on the Arduino board. This indicates that the board is receiving power from your computer. Some boards might also have a pre-loaded "Blink" sketch, causing another LED (often labeled 'L', connected to pin 13) to start blinking.
+1.  Connect the USB-A end (rectangular) to the computer and the other end (USB-B) to the arduino.
+2.  You should see a power LED (often labeled 'ON' or 'PWR') light up on the Arduino board. This indicates that the board is receiving power from your computer. Some boards might also have a pre-loaded "Blink" sketch, causing another LED (often labeled 'L', connected to pin 13) to start blinking.
 
 ## Step 3: Configure the Arduino IDE
 
