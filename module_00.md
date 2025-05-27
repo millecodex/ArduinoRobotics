@@ -14,7 +14,7 @@ An Arduino is a microcontroller board. Think of it as a tiny, programmable compu
 
 The Arduino IDE is the software you'll use to write code (called "sketches"), compile it, and upload it to your Arduino board.
 
-1.  Go to the official Arduino website and download the suitable version for your OS: [www.arduino.cc](https://www.arduino.cc/en/software/#ide)
+1.  Go to the official Arduino website and download the suitable version for your OS: [https://www.arduino.cc/en/software/#ide](https://www.arduino.cc/en/software/#ide)
 
 ## Step 2: Connect Your Arduino Board
 
