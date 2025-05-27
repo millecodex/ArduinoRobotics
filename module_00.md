@@ -9,12 +9,6 @@ An Arduino is a microcontroller board. Think of it as a tiny, programmable compu
 
 **Fun Fact:** The open-source nature of Arduino means that not only is the software free to use and modify, but the hardware designs are also openly available. This has led to a massive community of users, a wide variety of "clone" boards, and an incredible number of shared projects and libraries.
 
-## What You'll Need for This Module:
-
-* An Arduino Uno (or a compatible board like an Elegoo Uno, etc.)
-* A USB cable (usually A-to-B type, the kind often used for printers)
-* A computer (Windows, macOS, or Linux)
-
 ## Step 1: Download and Install the Arduino IDE
 ### (This is already done in the RMIT Windows Lab)
 
