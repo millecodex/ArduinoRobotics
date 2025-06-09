@@ -27,38 +27,34 @@ Now, let's tell the Arduino IDE which board you're using and how to communicate 
 
 1.  **Open the Arduino IDE.** You'll see a window with a text editor for writing code, a message area, and a console.
 
-    ![Arduino IDE Interface](https://www.arduino.cc/en/uploads/Main/IDE_0000.png)
-    *(Image Credit: Arduino.cc - The Arduino IDE interface)*
+   ![image](https://github.com/user-attachments/assets/efa9904b-26e2-4495-9b1b-4178379577b2)
+
 
 2.  **Select Your Board:**
-    * Go to **Tools > Board**.
-    * Scroll through the list and select "Arduino Uno" (or the specific type of Arduino board you are using if it's different).
+    * Go to **Tools > Board**
+    * Scroll through the list and select "Arduino Uno" (it will probably auto-recognise)
 
-    ![IDE Tools > Board Menu](https://docs.arduino.cc/assets/02f37b1717507909786290d1c9508831.png)
-    *(Image Credit: Arduino.cc - Selecting the board in the IDE)*
 
 3.  **Select the Serial Port:**
     The serial port is the communication channel your computer uses to talk to the Arduino.
-    * Go to **Tools > Port**.
-    * You should see a list of available serial ports. The port your Arduino is connected to will usually have "Arduino Uno" or a similar identifier next to it.
+    * Go to **Tools > Port**
+    * You should see a list of available serial ports. The port your Arduino is connected to will usually have "(Arduino Uno)" or a similar identifier next to it.
         * **Windows:** It will likely be `COMX` (e.g., `COM3`, `COM4`). If you're unsure which one it is, you can disconnect your Arduino, check the list of ports, then reconnect it and see which new port appears.
-        * **macOS:** It will likely be something like `/dev/cu.usbmodemXXXX` or `/dev/cu.usbserial-XXXX` (where XXXX is a number or code).
+        * **macOS:** It will likely be something like `/dev/cu.usbmodem101` or `/dev/cu.usbserial-XXXX` .
         * **Linux:** It will likely be `/dev/ttyACMX` or `/dev/ttyUSBX` (e.g., `/dev/ttyACM0`). You might need to add your user to the `dialout` group to have permission to access the serial port (`sudo usermod -a -G dialout yourusername`, then log out and log back in).
 
     If you don't see a port or are unsure:
-    * Ensure your USB cable is a data cable (some cheap cables are power-only).
+    * Ensure your USB cable is a data cable (basic cables are power-only, these use standard 'printer cables' which include data transfer).
     * Try a different USB port on your computer.
     * Check your system's device manager (Windows) or system information (macOS/Linux) to see if the board is being recognized by the operating system.
 
-    The image from your notes shows a common message if no port is selected:
+    The image shows a common message if no port is selected:
+    ![image](https://github.com/user-attachments/assets/55492d65-eabc-45e4-b1ad-afc0387f7b00)
+
     ```
     (i) Please select a port to obtain board info.
     ```
-    And the status bar might show `[not connected]`:
-    ```
-    Ln 36, Col 5 Arduino Uno on /dev/cu.usbmodem2101 [not connected]
-    ```
-    This means you need to complete the "Select the Serial Port" step above.
+    And the status bar might show `[not connected]`. This means you need to complete the "Select the Serial Port" step above.
 
 ## Step 4: Verify Communication - "Proof of Life"
 
@@ -67,10 +63,9 @@ Once you've selected the correct board and port, you can verify that the IDE can
 1.  Go to **Tools > Get Board Info**.
 2.  If the connection is successful, a small window will pop up displaying information about your board, such as its VID, PID, and Serial Number (SN).
 
-    ![Board Info Dialog](https://user-images.githubusercontent.com/10934705/149621367-4a720d83-63e5-4a4f-9165-3e579e06956c.png)
-    *(Example of a "Board Info" dialog. Your details might vary.)*
+<img src="https://github.com/user-attachments/assets/4f2e2db5-7526-4acc-b21f-d97f4c03ec0b" alt="connection is successful" width="400px" height="auto">
 
-    This confirms that your computer and the Arduino IDE can "see" and identify your Arduino board. This is our "proof of life"!
+This confirms that your computer and the Arduino IDE can "see" and identify your Arduino board. This is our "proof of life"!
 
 ## Troubleshooting Common Issues:
 
