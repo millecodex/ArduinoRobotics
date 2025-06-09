@@ -26,15 +26,14 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ### [Module 1b: Using a Breadboard and an External LED](module_01b.md)
 - To the breadboards! Blinking an LED
+- Building a circuit, adding a resistor
 
 ### [Module 2: Sensing the World - Ultrasonic Obstacle Detection](module_02.md)
-- Introduction to sensors
 - Principles of ultrasonic distance measurement (echolocation)
 - Interfacing with the HC-SR04 ultrasonic sensor
-- Using the NewPing library
-- Reading sensor data via the Serial Monitor
 
 ### Module 2b: Creating a Reusable Distance Function
+- still in draft
 
 ### [Module 3: Movement - Motor Control](module_03.md)
 - Introduction to DC motors
