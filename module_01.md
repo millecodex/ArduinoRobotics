@@ -109,3 +109,9 @@ Understanding these pins is crucial as you begin to connect external components 
 2. Modify the `delay()` values in the Blink sketch to make the LED blink faster. For example, try `delay(100)` for both `HIGH` and `LOW` states.  
 3. Experiment with different `delay()` values for the `HIGH` and `LOW` states (e.g., LED on for 200ms, off for 800ms). How does this affect the perceived blinking pattern?  
 4. Observe the TX and RX LEDs on your Arduino board while uploading the sketch. Describe their behavior.
+
+
+---
+
+| [⬅️ Back: Module 0 - Getting Started](module-00.md) | [🏠 Home: Table of Contents](intro-welcome.md) | [➡️ Next: Module 1b - Breadboard LED](module-1b.md) |
+| :------------------------------------------------ | :------------------------------------------- | :------------------------------------------------- |
