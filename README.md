@@ -37,17 +37,14 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ### [Module 3: Movement - Motor Control](module_03.md)
 - Introduction to DC motors
-- Using the Arduino Motor Shield
-- Understanding the need for a separate power supply for motors
+- Calibrating rotation direction
 
 ### [Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)](module_03b.md)
-- something here
+- Time permitting this module may be skipped
 
-### [Module 4: Precision Movement - Servo Control](https://github.com/millecodex/ArduinoRobotics/blob/main/module_04.md)
+### [Module 4: Precision Movement - Servo Control](module_04.md)
 - Introduction to servo motors
-- Understanding positional control
 - Interfacing with an SG90 servo motor
-- Using the Arduino Servo library
 
 ### [Module 4b: Sweeping the field](module_4b.md)
 - something here
@@ -55,7 +52,6 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 ### [Module 5: Bringing It All Together - The Car Build](module_05.md)
 - Mechanical assembly of a robot car chassis
 - Integrating motors, sensors, and the Arduino
-- Wiring considerations and power management
 
 ### [Module 6: Intelligence - Algorithm Development and Optimization](module_06.md)
 - Designing basic robot behaviors (e.g., obstacle avoidance)
