@@ -3,8 +3,13 @@
 In the previous modules, you learned to control LEDs and DC motors for basic movement. This module introduces you to **servo motors**, which are distinct from DC motors in their primary function: precise positional control. Servo motors are widely used in robotics for tasks requiring specific angles, such as controlling robotic arms, steering mechanisms, or camera gimbals.
 
 ## **Understanding Servo Motors**
+A servo motor is a self-contained rotary actuator that allows for exact control of its angular position. Think of it as a small motor with a built-in brain that knows its current orientation. Each servo motor typically integrates:
 
-A servo motor is a rotary actuator that allows for precise control of angular position. Unlike continuous rotation DC motors, standard servo motors are designed to rotate only within a limited range (e.g., 0 to 180 degrees) and hold a specific angle. They consist of a DC motor, a gearbox, a potentiometer (for position feedback), and a control circuit.
+* **A DC Motor:** Provides the power to rotate the shaft.
+* **A Gearbox:** Reduces the motor's high rotational speed to a usable lower speed, while simultaneously increasing torque. This allows the servo to hold a position against resistance.
+* **A Potentiometer:** An internal variable resistor that provides precise feedback on the current angular position of the servo's output shaft.
+* **A Control Circuit:** This electronic brain compares the desired position (from your Arduino's signal) with the actual position (from the potentiometer) and drives the DC motor until the two match. This continuous feedback loop is what makes servos so accurate and able to "hold" a position.
+
 
 The control circuit interprets a pulse width modulation (PWM) signal from the microcontroller (like Arduino) to determine the desired angle. The servo then moves its shaft to that angle and holds it there.
 
@@ -71,17 +76,20 @@ void loop() {
 
 The SG90 is a positional servo, meaning it cannot rotate a full 360 degrees continuously. Its typical range is from 0 to 180 degrees. However, some individual SG90 servos might have a slightly narrower mechanical range (e.g., 0 to 170 degrees) before hitting their internal limits. It's always a good idea to test the actual range of your specific servo to avoid stressing it.
 
-## **Exercises and Questions**
+## Exercises and Questions
 
-1.  Connect your SG90 servo motor to your Arduino Uno as described in the "SG90 Micro Servo Motor Pin Setup" section. Upload the "Basic Servo Control Code" sketch. Observe the servo's movement as it cycles through 0, 90, and 180 degrees.
-2.  Experiment with different angle values in `myServo.write()`. For example, try `myServo.write(45);` or `myServo.write(135);`. How does the servo respond?
-3.  Disconnect the power and physically change the orientation of the servo. Plug it back in and watch the output. What do you notice?
-4.  Change the `delay()` values between movements. What happens if you make the delays very short (e.g., 100ms)? What happens if they are very long (e.g., 5000ms)?
-5.  **Design Thinking:** If you needed a motor that could spin continuously in one direction or the other, would a standard positional servo like the SG90 be suitable? Why or why not? What type of motor would be more appropriate?
-
+1.  **Sweep Timing and Prediction:** Upload the "Servo Sweep" sketch to your Arduino. Using a stopwatch, carefully measure the total time it takes for the servo to complete one full sweep cycle (from 0 to 180 and back to 0). Now, without uploading, predict what the new total sweep time would be if you changed `delay(15);` to `delay(5);` within both `for` loops. Upload the modified code and verify your prediction. Explain any discrepancies.
+2.  **Non-Linear Sweep Experiment:** Modify the `for` loops to create a non-linear sweeping motion. For example, make the servo move faster when it's near the center (e.g., 60-120 degrees) and slower when it's approaching the extremes (0-30 degrees or 150-180 degrees). You could achieve this by adjusting the `delay()` based on the `pos` value (e.g., using an `if-else` statement or a mathematical function).
+3.  **Dynamic Sweep Range:** Program the servo to cycle through different sweep ranges automatically. For example, it could sweep:
+    * A narrow range (e.g., 60 to 120 degrees) for 3 seconds.
+    * A medium range (e.g., 30 to 150 degrees) for 3 seconds.
+    * A full range (0 to 180 degrees) for 3 seconds.
+    * Then repeat this sequence indefinitely.
+4.  **Design Thinking:** Imagine you've attached an ultrasonic sensor (from Module 2) to this sweeping servo. How does this setup fundamentally improve your robot's ability to detect obstacles compared to having the sensor fixed in place? 
+5.  **Advanced Challenge:** Can you modify the code such that the servo sweeps from 0 to 180 degrees at a relatively slow pace, but then sweeps back from 180 to 0 degrees at a much faster pace? Explain the changes you made and why they achieve the desired effect.
 ---
 
 **Fun Fact:** The term "servo" comes from the Latin word "servus," meaning "slave." In engineering, a servo mechanism "serves" or "obeys" a command, precisely controlling a mechanical system's position, velocity, or acceleration, much like how your SG90 servo "obeys" your angle commands!
 
 ---
-NEXT ➡️ You are now ready to move on to [Module 4b](./module_04b.md), where we'll use the servo to scan its environment!
+NEXT ➡️ You are now ready to move on to [Module 5](./module_05.md), the big build!
