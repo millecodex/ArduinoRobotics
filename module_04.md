@@ -78,7 +78,7 @@ The SG90 is a positional servo, meaning it cannot rotate a full 360 degrees cont
 
 ## Exercises and Questions
 
-1.  **Sweep Timing and Prediction:** Upload the "[Servo Sweep](./sketches/4_sweep.ino)" sketch to your Arduino. What is the code doing?
+1.  **Sweep Timing and Prediction:** Upload the "[Servo Sweep](./sketches/sketch_04_sweep.ino)" sketch to your Arduino. What is the code doing?
 2.  **Non-Linear Sweep Experiment:** Modify the `for` loops to create a non-linear sweeping motion. For example, make the servo move faster when it's near the center (e.g., 60-120 degrees) and slower when it's approaching the extremes (0-30 degrees or 150-180 degrees). You could achieve this by adjusting the `delay()` based on the `pos` value (e.g., using an `if-else` statement or a mathematical function).
 3.  **Dynamic Sweep Range:** Program the servo to cycle through different sweep ranges automatically. For example, it could sweep:
     * A narrow range (e.g., 60 to 120 degrees) for 3 seconds.
