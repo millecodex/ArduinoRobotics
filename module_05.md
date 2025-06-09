@@ -32,9 +32,8 @@ While the specific chassis design may vary, the core components for a simple two
 
 This diagram describes the complete electrical connections for your autonomous obstacle-avoiding robot, integrating all the components from previous modules.
 
-**Diagram Description:**
+![Pasted Graphic 8](https://github.com/user-attachments/assets/ecdeba8f-d9de-445a-85fd-dd52f4eb84d5)
 
-Imagine your Arduino Uno board as the central hub. All components branch out from it or from the L298N module.
 
 1.  **Arduino Power & Ground:**
 
