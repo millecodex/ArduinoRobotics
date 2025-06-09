@@ -46,7 +46,7 @@ If you haven't already, install them via `Sketch` -> `Include Library` -> `Manag
 
 This sketch combines the L298N motor control (digital direction only, assuming ENA/ENB jumpers are HIGH), ultrasonic sensing, and servo scanning to create an autonomous obstacle-avoiding robot.
 
-See the full sketch [here](./sketches/module_06.ino). Open in a separate window to match the explanation.
+See the full sketch [here](./sketches/sketch_06.ino). Open in a separate window to match the explanation.
 
 ### Code Explanation:
 
