@@ -17,9 +17,7 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 ### [Module 0: Setup - Proof of Life](module_00.md)
 - Connecting the Arduino board
-- Verifying board communication
-- Navigating the Arduino IDE (Integrated Development Environment)
-- Understanding serial ports
+- Navigating the Arduino IDE
 
 ### [Module 1: Turn Out the Lights - The "Blink" Sketch](module_01.md)
 - Introduction to Arduino programming structure: `setup()` and `loop()`
