@@ -45,9 +45,7 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 ### [Module 4: Precision Movement - Servo Control](module_04.md)
 - Introduction to servo motors
 - Interfacing with an SG90 servo motor
-
-### [Module 4b: Sweeping the field](module_4b.md)
-- something here
+- Sweep the field of view
   
 ### [Module 5: Bringing It All Together - The Car Build](module_05.md)
 - Mechanical assembly of a robot car chassis
