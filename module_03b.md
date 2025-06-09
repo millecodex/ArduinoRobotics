@@ -1,3 +1,5 @@
+## Depending on time constraints ⏰ this module can be skipped 🏃
+---
 # **Module 3b: Motor Control \- Variable Speed with Pulse Width Modulation (PWM)**
 
 Building on the digital ON/OFF motor control from Module 3a, this module focuses on achieving variable speed for your DC motors. The ability to precisely control motor speed is crucial for nuanced movements, smooth acceleration/deceleration, and accurate navigation in robotics. This is primarily achieved through a technique called Pulse Width Modulation (PWM).
