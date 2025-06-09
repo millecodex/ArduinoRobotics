@@ -6,21 +6,24 @@ Welcome to Module 1\! In this module, you will embark on your first practical ex
 
 Every Arduino program, also known as a "sketch," has two main functions that are crucial for its operation:
 
-* void setup(): This function runs only once when the Arduino board is powered on or reset. It's used to initialize settings, configure pins as inputs or outputs, and start any libraries you might be using. Think of it as the setup phase for your project.  
-* void loop(): This function runs continuously after the setup() function has completed. As its name suggests, it "loops" repeatedly, executing the code within it over and over again. This is where the main logic of your program resides, controlling the actions of your Arduino.
+<img src="https://github.com/user-attachments/assets/6a80a8ec-36e2-4dc7-a04d-291eba660f66" alt="Arduino IDE Serial Monitor Output" width="500px" height="auto">
+
+
+* `void setup()`: This function runs only once when the Arduino board is powered on or reset. It's used to initialize settings, configure pins as `INPUT` or `OUTPUT`, and start any libraries you might be using. Think of it as the setup phase for your project.
+* `void loop()`: This function runs continuously after the `setup()` function has completed. As its name suggests, it "loops" repeatedly, executing the code within it over and over again. This is where the main logic of your program resides, controlling the actions of your Arduino.
 
 ## **Essential Arduino Functions**
 
 To control the LED, we will use a few fundamental functions:
 
-* pinMode(pin, mode): This function configures a specified pin to behave either as an INPUT or an OUTPUT. For controlling an LED, we need to set the pin as an OUTPUT so the Arduino can send electrical signals to it.  
-  * pin: The number of the digital pin you want to configure.  
-  * mode: Either INPUT, OUTPUT, or INPUT\_PULLUP.  
-* digitalWrite(pin, value): This function writes a HIGH or LOW value to a digital pin.  
-  * pin: The number of the digital pin you want to write to.  
-  * value: HIGH (which is typically 5 Volts) to turn something on, or LOW (0 Volts) to turn something off.  
-* delay(ms): This function pauses the program for a specified amount of time (in milliseconds).  
-  * ms: The number of milliseconds to pause. There are 1000 milliseconds in 1 second.
+* `pinMode(pin, mode)`: This function configures a specified pin to behave either as an `INPUT` or an `OUTPUT`. For controlling an LED, we need to set the pin as an `OUTPUT` so the Arduino can send electrical signals to it.
+    * `pin`: The number of the digital pin you want to configure.
+    * `mode`: Either `INPUT`, `OUTPUT`, or `INPUT_PULLUP`.
+* `digitalWrite(pin, value)`: This function writes a `HIGH` or `LOW` value to a digital pin.
+    * `pin`: The number of the digital pin you want to write to.
+    * `value`: `HIGH` (which is typically 5 Volts) to turn something on, or `LOW` (0 Volts) to turn something off.
+* `delay(ms)`: This function pauses the program for a specified amount of time (in milliseconds).
+    * `ms`: The number of milliseconds to pause. There are 1000 milliseconds in 1 second.
 
 ## **The Blink Sketch**
 
@@ -29,24 +32,25 @@ The Blink sketch is a classic example that demonstrates how to turn an LED on an
 To load the Blink sketch:
 
 1. Open the Arduino IDE.  
-2. Go to File \-\> Examples \-\> 01.Basics \-\> Blink.
+2. Go to File \-\> Examples \-\> 01.Basics \-\> Blink. A *new* Arduino interface will open, this is normal behaviour.
 
-Here is the code for the Blink sketch:
 ```cpp
-// the setup function runs once when you press reset or power the board  
-void setup() {  
-  // initialize digital pin LED\_BUILTIN as an output.  
-  pinMode(LED\_BUILTIN, OUTPUT);  
+Here is the code for the Blink sketch:
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever  
-void loop() {  
-  digitalWrite(LED\_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)  
-  delay(1000);                       // wait for a second  
-  digitalWrite(LED\_BUILTIN, LOW);    // turn the LED off by making the voltage LOW  
-  delay(1000);                       // wait for a second  
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
 }
 ```
+
 ### **Code Explanation:**
 
 - `pinMode(LED_BUILTIN, OUTPUT);`: In the `setup()` function, this line initializes the `LED_BUILTIN` pin as an `OUTPUT`. This prepares the pin to send electrical signals to control the LED.  
@@ -60,19 +64,27 @@ This sequence of turning the LED on, waiting, turning it off, and waiting, repea
 
 To get your code onto the Arduino board, you need to upload it. This process involves two main steps:
 
-1. **Compiling the Sketch:** The Arduino IDE translates your human-readable C++ code into machine code that the Arduino's microcontroller can understand.  
-2. **Sending the Code to the Board:** The compiled code is then sent from your computer to the Arduino board via the USB cable.
+1.  **Open Serial Monitor:** Click the 🔍 (spy glass) in the top right, this will show you communication information.
+2.  **Compiling the Sketch:** Click the ✅ (check). The Arduino IDE translates your human-readable C++ code into machine code that the Arduino's microcontroller can understand.
+3.  **Sending the Code to the Board:** Click the ➡️ (right arrow). The compiled code is then sent from your computer to the Arduino board via the USB cable.
+   
+During the upload process, you will typically observe the **TX (Transmit)** and **RX (Receive)** LEDs on your Arduino board flashing rapidly. This indicates data communication between your computer and the board.
 
-During the upload process, you will typically observe the **TX (Transmit)** and **RX (Receive)** LEDs on your Arduino board flashing rapidly. This indicates data communication between your computer and the board. Once the upload is complete, the LED\_BUILTIN should begin flashing at a rate of once per second.
+## **Did it Work?**
+
+If the L LED on the board is flashing (at a rate of once per second), then it works! Hooray! Alternatively, open the Output in the serial monitor and you will see any error messages here. No error messages is good news and you'll get some information about the storage space.
+
+![image](https://github.com/user-attachments/assets/289d538b-10f6-49d4-a887-6ffc632091df)
 
 **Troubleshooting Tip:** If you encounter issues, ensure you have selected the correct Arduino board type (Tools \-\> Board) and the correct serial port (Tools \-\> Port). If the port is not listed or appears as "not connected," try unplugging and replugging your Arduino, or restarting the IDE.
 
-## **Theory: Arduino Uno Architecture and Pins**
+## **Theory: Arduino Uno Pins and Architecture**
 
 The Arduino Uno is a popular microcontroller board based on the ATmega328P. It has a set of digital and analog input/output (I/O) pins that allow you to connect various components and sensors.
 
-Diagram Description:  
-Imagine a simplified diagram of the Arduino Uno board.
+### Pins
+![image](https://github.com/user-attachments/assets/57743a74-15b1-4afd-b72b-78144397e5d0)
+[image credit: Pija Education](https://pijaeducation.com/arduino/introduction-arduino/arduino-uno/)
 
 * At the top, there's a USB port for power and communication with your computer.  
 * Near the USB port, you'll see a power jack for external power supply.  
@@ -83,6 +95,13 @@ Imagine a simplified diagram of the Arduino Uno board.
 * The central component is the ATmega328P microcontroller chip, the "brain" of the Arduino.
 
 Understanding these pins is crucial as you begin to connect external components and build more complex circuits.
+
+### Architecture (Components & Design)
+![image](https://github.com/user-attachments/assets/0846a2ce-cfa2-493e-84c8-4e348379965b)
+[image credit: Pija Education](https://pijaeducation.com/arduino/introduction-arduino/arduino-uno/)
+
+
+
 
 ## **Exercises and Questions**
 
