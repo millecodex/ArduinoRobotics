@@ -115,3 +115,6 @@ void loop() {
 ---
 
 **Fun Fact:** While PWM is widely used for motor control, it's also the fundamental principle behind how many modern LED dimmers work, allowing you to smoothly adjust the brightness of lights without changing the actual voltage! It's also used in audio amplifiers and power converters.
+
+---
+NEXT ➡️ You are now ready to move on to [Module 4](./module_04.md), where we'll add in a servo!
