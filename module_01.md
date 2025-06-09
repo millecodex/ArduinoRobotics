@@ -112,6 +112,4 @@ Understanding these pins is crucial as you begin to connect external components 
 
 
 ---
-
-| [⬅️ Back: Module 0 - Getting Started](module_00.md) | [🏠 Home: Table of Contents](https://github.com/millecodex/ArduinoRobotics/tree/main) | [➡️ Next: Module 1b - Breadboard LED](module_1b.md) |
-| :------------------------------------------------ | :------------------------------------------- | :------------------------------------------------- |
+NEXT ➡️ You are now ready to move on to [Module 1b](./module_01b.md), where we'll plug into a breadboard!
