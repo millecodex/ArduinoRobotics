@@ -174,4 +174,5 @@ void stopMotors() {
 **Fun Fact:** H-bridge circuits, like the one inside the L298N, are named because the arrangement of switches or transistors resembles the letter 'H' on a circuit diagram. This clever configuration allows current to flow in two directions through a motor, which is fundamental to controlling its direction of rotation!
 
 ---
-NEXT ➡️ You are now ready to move on to [Module 3b](./module_03b.md), to extend the motor control!
+NEXT ➡️ (time permitting) You are now ready to move on to [Module 3b](./module_03b.md), to extend the motor control!
+NEXT ➡️ You are now ready to move on to [Module 4](./module_04.md), where we'll add in a servo!
