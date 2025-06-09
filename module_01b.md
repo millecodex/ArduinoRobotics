@@ -74,3 +74,6 @@ Upload the Module\_1b\_breadboard\_LED.ino sketch to your Arduino board. Observe
 
 ### Fun Fact
 The first commercially available Light Emitting Diode (LED) that emitted visible light was red, developed in 1962 by Nick Holonyak Jr. While LEDs are now ubiquitous, it took [decades of research](https://www.simplyled.co.uk/blog/a-brief-history-of-the-light-emitting-diode-led/) to develop the blue LED, which was essential for creating white light LEDs and enabling technologies like LED screens and energy-efficient lighting!
+
+---
+NEXT ➡️ You are now ready to move on to [Module 2](./module_02.md), where we'll use an Ultrasonic Sensor!
