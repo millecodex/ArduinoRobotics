@@ -8,8 +8,9 @@ Ultrasonic sensors operate on the principle of echolocation, similar to how bats
 
 The fundamental formula for calculating distance based on speed and time is:
 
-Distance=Speed×Time  
-In this context, 'Speed' refers to the speed of sound in air (approximately 343 meters per second or 0.0343 cm per microsecond). The 'Time' measured by the sensor is the total time for the sound to travel to the object and back. Therefore, to get the one-way distance, we divide the total time by two.
+$$ \text{Distance} = \text{Speed} \times \text{Time} $$
+
+In this context, 'Speed' refers to the speed of sound in air (approximately 343 meters per second). The 'Time' measured by the sensor is the total time for the sound to travel to the object and back. Therefore, to get the one-way distance, we divide the total time by two.
 
 ## **Introducing the NewPing Library**
 
@@ -22,6 +23,8 @@ While you could implement the ultrasonic sensor logic from scratch, the NewPing 
 3. In the Library Manager, search for "NewPing".  
 4. Select "NewPing by Tim Eckel" and click "Install".
 
+<img src="https://github.com/user-attachments/assets/c7eee1b1-d4bc-43f6-b29d-f64dc7dca72b" alt="L293D Motor Shield Example Connection" width="200px" height="auto">
+
 ## **Ultrasonic Sensor Pin Setup**
 
 The most common ultrasonic sensor, like the HC-SR04, typically has four or five pins. When using a 4-pin configuration, the OUT pin is usually left unconnected.
@@ -32,11 +35,13 @@ Here's a breakdown of the standard pin connections:
 | :---- | :---- | :---- |
 | **VCC** | Power supply (+5V) | 5V |
 | **GND** | Ground | GND |
-| **TRIG** | Trigger: Send a HIGH pulse (≥10μs) to start ranging | Any digital pin (e.g., 12\) |
-| **ECHO** | Echo: Outputs pulse width proportional to distance | Any digital pin (e.g., 13\) |
+| **TRIG** | Trigger: Send a HIGH pulse (≥10μs) to start ranging | Any digital pin (e.g., 12) |
+| **ECHO** | Echo: Outputs pulse width proportional to distance | Any digital pin (e.g., 13) |
 | **OUT** | Optional: Used for single-pin mode | Leave unconnected in 4-pin mode |
 
-Diagram Description:  
+Connect up the sensor to the appropriate pins. You may have to use a combination of male/female jumpers to do you. Stay organised by keeping your colors consistent, it will help later when we have lots of wires. Its best practise to unplug the power from the Arduino when wiring.
+
+< *Image Description:* >  
 Imagine your Arduino Uno board connected to an ultrasonic sensor. The VCC pin of the sensor is connected to the 5V pin on the Arduino. The GND pin of the sensor is connected to a GND pin on the Arduino. The TRIG pin of the sensor is connected to Arduino's Digital Pin 12\. The ECHO pin of the sensor is connected to Arduino's Digital Pin 13\. The OUT pin of the sensor is left unconnected.
 
 ## **Code Example: Reading Distance**
@@ -77,7 +82,7 @@ void loop() {
 
 ## **Viewing Output in Serial Monitor**
 
-After uploading the sketch, open the Serial Monitor in the Arduino IDE (Tools \-\> Serial Monitor). You should see a continuous stream of distance readings, similar to this:
+After uploading the sketch, open the Serial Monitor in the Arduino IDE (Tools -> Serial Monitor). You should see a continuous stream of distance readings, similar to this:
 
 ```plaintext
 Ping: 188cm  
@@ -102,6 +107,11 @@ Understanding the specifications of your ultrasonic sensor is important for effe
 
 1. Hold the ultrasonic sensor close to your ear. Can you hear the 40 kHz ultrasonic pulse? Why or why not?  
 2. Can you get the sensor to show `0cm` in the Serial Monitor? What does a `0cm` reading signify in the context of this sensor? (Hint: Consider the `MAX_DISTANCE` and what happens when no echo is detected).  
-3. **Critical Thinking:** How does the sensor's field of view (±15 degrees) affect the ability of a robotic car to navigate its environment? What challenges might this narrow field of view present, and how could they be overcome?
+3. **Thinking Ahead:** How does the sensor's field of view (±15 degrees) affect the ability of a robotic car to navigate its environment? What challenges might this narrow field of view present, and how could they be overcome?
 
-**Fun Fact:** Did you know that some species of **shrews**, despite their tiny size and poor eyesight, also use echolocation, much like bats, to navigate and hunt for insects in their environment? They emit high-frequency squeaks and listen for the echoes to build a sound map of their surroundings!
+---
+
+**Fun Fact:** Did you know that some blind individuals have developed remarkable echolocation abilities, much like bats and dolphins? By making sharp tongue clicks or using a cane, they can interpret the echoes to build a detailed "sound map" of their surroundings, allowing them to navigate complex environments, ride bicycles, and even play sports. This incredible human adaptation highlights the brain's plasticity and ability to repurpose sensory processing areas. [Daniel Kish's story](https://www.npr.org/2011/03/13/134425825/human-echolocation-using-sound-to-see)
+
+---
+NEXT ➡️ You are now ready to move on to [Module 3](./module_03.md), to wire up a motor!
