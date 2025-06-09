@@ -48,9 +48,9 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Sweep the field of view
   
 ### [Module 5: Bringing It All Together - The Car Build](module_05.md)
-- Mechanical assembly of a robot car chassis
-- Integrating motors, sensors, and the Arduino
-
+- Mechanical assembly of a autonomous car
+- Integrating Arduino, L298n controller, Servo, Ultrasonic Sensor, & Power
+  
 ### [Module 6: Intelligence - Algorithm Development and Optimization](module_06.md)
 - Designing basic robot behaviors (e.g., obstacle avoidance)
 - Implementing decision-making in code
