@@ -175,4 +175,5 @@ void stopMotors() {
 
 ---
 NEXT ➡️ (time permitting) You are now ready to move on to [Module 3b](./module_03b.md), to extend the motor control!
+
 NEXT ➡️ You are now ready to move on to [Module 4](./module_04.md), where we'll add in a servo!
