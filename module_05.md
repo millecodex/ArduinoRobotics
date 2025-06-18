@@ -18,15 +18,6 @@ While the specific chassis design may vary, the core components for a simple two
 * **Breadboard:** A small one may be useful for organizing sensor connections if needed.
 * **Jumper Wires:** For all electrical connections.
 
-**Assembly Tips:**
-
-* Mount your DC motors securely to the chassis, ensuring their shafts can connect to the wheels.
-* Attach the caster wheel or skid.
-* Find a secure place to mount your Arduino Uno.
-* Mount the L298N motor driver module. Ensure it's easily accessible for wiring, especially its power terminals.
-* Attach the SG90 servo motor to a suitable position (e.g., the front of the chassis).
-* Mount the ultrasonic sensor onto the servo's horn or a custom bracket attached to the servo. This setup allows the sensor to "look" in different directions.
-* Mount your external battery pack.
 
 ## Integrated Circuit Diagram: Bringing it All Together
 
