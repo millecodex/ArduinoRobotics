@@ -30,7 +30,7 @@ This diagram describes the complete electrical connections for your autonomous o
 
     * Arduino powered via USB or its DC jack.
     * An Arduino `GND` pin is connected to the `GND` terminal of the L298N module (establishing a common ground).
-    * The Arduino's 5V pin is connected to the `+5V` (logic input) pin on the L298N module. This is crucial if your L298N's motor power supply is 6V or less, and you've removed the onboard 5V enable jumper.
+    * The Arduino's 5V pin is connected to the `+5V` (logic input) pin on the L298N module. This is crucial since our L298N's motor power supply is 6V or less, and we've removed the onboard 5V jumper.
 
 2.  **L298N Motor Driver Module & DC Motors:**
 
