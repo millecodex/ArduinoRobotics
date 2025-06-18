@@ -29,6 +29,7 @@ While you could implement the ultrasonic sensor logic from scratch, the NewPing 
 
 The most common ultrasonic sensor, like the HC-SR04, typically has four or five pins. When using a 4-pin configuration, the OUT pin is usually left unconnected.
 
+### Wiring Setup 
 Here's a breakdown of the standard pin connections:
 
 | Pin | Function | Arduino Connection |
@@ -41,8 +42,7 @@ Here's a breakdown of the standard pin connections:
 
 Connect up the sensor to the appropriate pins. You may have to use a combination of male/female jumpers to do you. Stay organised by keeping your colors consistent, it will help later when we have lots of wires. Its best practise to unplug the power from the Arduino when wiring.
 
-< *Image Description:* >  
-Imagine your Arduino Uno board connected to an ultrasonic sensor. The VCC pin of the sensor is connected to the 5V pin on the Arduino. The GND pin of the sensor is connected to a GND pin on the Arduino. The TRIG pin of the sensor is connected to Arduino's Digital Pin 12\. The ECHO pin of the sensor is connected to Arduino's Digital Pin 13\. The OUT pin of the sensor is left unconnected.
+
 
 ## **Code Example: Reading Distance**
 
