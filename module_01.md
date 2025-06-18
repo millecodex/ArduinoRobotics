@@ -33,6 +33,7 @@ To load the Blink sketch:
 
 1. Open the Arduino IDE.  
 2. Go to File \-\> Examples \-\> 01.Basics \-\> Blink. A *new* Arduino interface will open, this is normal behaviour.
+3. Make sure you are connected (Tools \-\> Port... \-\> ...usb...) 
 
 ```cpp
 Here is the code for the Blink sketch:
