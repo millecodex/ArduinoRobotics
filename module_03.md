@@ -62,6 +62,9 @@ For simply moving forward and reverse, we need two digital pins per motor to con
     * Arduino Digital Pin 8 to `IN2` on the L298N.
     * Arduino Digital Pin 5 to `IN3` on the L298N.
     * Arduino Digital Pin 6 to `IN4` on the L298N.
+ 
+![image](https://github.com/user-attachments/assets/f54950ff-58cf-410f-ac71-e0d199db70a3)
+
 
 ## Coding Basic Forward and Reverse Movement
 
