@@ -29,6 +29,9 @@ While you could implement the ultrasonic sensor logic from scratch, the NewPing 
 
 The most common ultrasonic sensor, like the HC-SR04, typically has four or five pins. When using a 4-pin configuration, the OUT pin is usually left unconnected.
 
+![image](https://github.com/user-attachments/assets/ac07a3fb-f132-4a39-84b6-ca8b503e4fb5)
+
+
 ### Wiring Setup 
 Here's a breakdown of the standard pin connections:
 
