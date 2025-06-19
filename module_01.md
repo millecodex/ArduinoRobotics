@@ -73,7 +73,12 @@ During the upload process, you will typically observe the **TX (Transmit)** and 
 
 ## **Did it Work?**
 
-If the L LED on the board is flashing (at a rate of once per second), then it works! Hooray! Alternatively, open the Output in the serial monitor and you will see any error messages here. No error messages is good news and you'll get some information about the storage space.
+If the L LED on the board is flashing (at a rate of once per second), then it works! Hooray! Alternatively, open the Output in the serial monitor and you will see any error messages here. 
+
+![PXL_20250609_023507333](https://github.com/user-attachments/assets/268d0946-f546-4597-9185-c52b05fc1b61)
+
+
+No error messages is good news and you'll get some information about the storage space.
 
 ![image](https://github.com/user-attachments/assets/289d538b-10f6-49d4-a887-6ffc632091df)
 
