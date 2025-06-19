@@ -27,8 +27,8 @@ Servo myServo;                                       // Servo object
 #define RIGHT_TURN 4
 #define STOP_MOVE 0
 
-const int DANGER_ZONE_CM = 20; // Distance in cm at which an obstacle is too close
-const int REVERSE_DURATION = 700; // Milliseconds to reverse
+const int DANGER_ZONE_CM = 25; // Distance in cm at which an obstacle is too close
+const int REVERSE_DURATION = 800; // Milliseconds to reverse
 const int TURN_DURATION = 800; // Milliseconds to turn
 
 void setup() {
@@ -44,7 +44,7 @@ void setup() {
 
   // Attach Servo to its pin
   myServo.attach(SERVO_PIN);
-  myServo.write(90); // Start servo at center position
+  myServo.write(90); // Start servo at center position (forward-facing)
   delay(500); // Give servo time to move
 
   // Ensure motors are initially stopped
@@ -52,16 +52,20 @@ void setup() {
 }
 
 void loop() {
-  int distance = scanForObstacle(); // Get distance by scanning
+  // Always check the distance straight ahead while moving forward
+  int distance = getForwardDistance(); 
   Serial.print("Current Distance: ");
   Serial.print(distance);
   Serial.println(" cm");
 
-  if (distance > DANGER_ZONE_CM || distance == 0) { // If no obstacle (distance > danger zone) or sensor returned 0 (no echo, far away)
+  if (distance > DANGER_ZONE_CM || distance == MAX_DISTANCE) { 
+    // If no obstacle (distance > danger zone) or sensor returned MAX_DISTANCE (no echo, far away)
+    // Note: NewPing returns 0 for no echo, but we're mapping 0 to MAX_DISTANCE in getForwardDistance()
     Serial.println("Path clear. Moving forward.");
     moveForward();
-    delay(200); // Move forward for a short duration, then re-scan
-  } else { // Obstacle detected within danger zone
+    delay(300); // Short delay to allow a bit of movement before re-checking
+  } else { 
+    // Obstacle detected within danger zone
     Serial.println("Obstacle detected! Avoiding...");
     avoidObstacle();
   }
@@ -111,58 +115,78 @@ void stopMotors() {
 
 // --- Sensing and Decision Making Functions ---
 
-// Function to scan for obstacles using the servo and ultrasonic sensor
-int scanForObstacle() {
-  int currentDistance;
-  int minDistance = MAX_DISTANCE + 1; // Initialize with a value higher than max possible distance
-
-  // Sweep servo from 0 to 180 degrees, taking readings
-  for (int pos = 0; pos <= 180; pos += 45) { // Scan at 0, 45, 90, 135, 180 degrees
-    myServo.write(pos);
-    delay(100); // Give servo time to move to position
-    currentDistance = sonar.ping_cm();
-    if (currentDistance > 0 && currentDistance < minDistance) { // Only update if valid reading
-      minDistance = currentDistance;
-    }
+// NEW: Function to get distance directly in front (servo at 90 degrees)
+int getForwardDistance() {
+  myServo.write(90); // Ensure servo is facing straight ahead
+  delay(300); // Give servo time to move if it was recently moved during avoidance
+  int distance = sonar.ping_cm();
+  // NewPing returns 0 if no echo within MAX_DISTANCE. Treat this as clear/far away.
+  if (distance == 0) {
+    return MAX_DISTANCE;
   }
+  return distance;
+}
 
-  // Sweep servo back to center (or desired resting position)
-  myServo.write(90);
-  delay(200); // Give servo time to return
+// NEW: Function to scan different directions and decide the best turn
+int decideAvoidanceDirection() {
+  int leftDistance, rightDistance;
 
-  return minDistance; // Return the minimum distance found during the scan
+  // Scan Left (e.g., 45 degrees)
+  myServo.write(45);
+  delay(600); // Give servo more time to move and stabilize for accurate reading
+  leftDistance = sonar.ping_cm();
+  if (leftDistance == 0) leftDistance = MAX_DISTANCE; // If no echo, assume clear
+
+  // Scan Right (e.g., 135 degrees)
+  myServo.write(135);
+  delay(600); // Give servo more time to move and stabilize
+  rightDistance = sonar.ping_cm();
+  if (rightDistance == 0) rightDistance = MAX_DISTANCE; // If no echo, assume clear
+
+  myServo.write(90); // Return servo to center after scan
+  delay(200);
+
+  Serial.print("Scan Result: Left=");
+  Serial.print(leftDistance);
+  Serial.print("cm, Right=");
+  Serial.print(rightDistance);
+  Serial.println("cm");
+
+  // Decide the turn direction based on which side is clearer
+  if (rightDistance > leftDistance) {
+    return RIGHT_TURN;
+  } else {
+    // If left is greater or equal, turn left
+    return LEFT_TURN;
+  }
 }
 
 // Function to execute obstacle avoidance routine
 void avoidObstacle() {
   stopMotors();
-  delay(500); // Small pause
+  delay(800); //  pause before reversing
 
   Serial.println("Reversing...");
   moveBackward();
   delay(REVERSE_DURATION); // Reverse for defined duration
 
   stopMotors();
-  delay(500); // Small pause
+  delay(800); //  pause before turning
 
-  // Decide to turn left or right randomly (or based on previous scan data)
-  // For simplicity, we'll turn right for now
-  Serial.println("Turning Right...");
-  turnRight();
+  int turnDecision = decideAvoidanceDirection(); // Use the new function to determine best turn
+
+  if (turnDecision == RIGHT_TURN) {
+    Serial.println("Turning Right based on scan...");
+    turnRight();
+  } else {
+    Serial.println("Turning Left based on scan...");
+    turnLeft();
+  }
   delay(TURN_DURATION); // Turn for defined duration
 
   stopMotors();
   delay(500); // Small pause
 
-  // After avoidance, scan again before continuing (optional, but good practice)
-  Serial.println("Avoiding complete. Re-scanning before moving forward.");
-  int postTurnDistance = scanForObstacle();
-  if (postTurnDistance <= DANGER_ZONE_CM && postTurnDistance != 0) {
-    Serial.println("Still blocked! Trying another turn.");
-    // If still blocked, try turning left this time (simple alternative)
-    turnLeft();
-    delay(TURN_DURATION);
-    stopMotors();
-    delay(500);
-  }
+  Serial.println("Avoidance maneuver complete. Resuming main loop.");
+  // The loop() function will automatically call getForwardDistance() for the next check.
 }
