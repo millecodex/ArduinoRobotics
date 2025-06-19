@@ -32,9 +32,6 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Principles of ultrasonic distance measurement (echolocation)
 - Interfacing with the HC-SR04 ultrasonic sensor
 
-### Module 2b: Creating a Reusable Distance Function
-- still in draft
-
 ### [Module 3: Movement - Motor Control](module_03.md)
 - Introduction to DC motors
 - Calibrating rotation direction
