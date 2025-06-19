@@ -25,7 +25,8 @@ To build your external LED circuit we'll trace from Positive (Live/Red) to Negat
 
 4.  **Connect to Ground (GND):** Finally, to complete the circuit, take another jumper wire (e.g., black or brown to represent ground). Connect one end of this jumper wire to the breadboard row where the last side of the resistor is connected. Connect the other end of this jumper wire to any `GND` (Ground) pin on your Arduino board.
 
-< *Hopfully Jeff will post a pic* >
+![image](https://github.com/user-attachments/assets/ab7dc1e8-f97a-48f2-8383-ee2ee77d2cef)
+
 
 ## Defining the Pin in Code
 
