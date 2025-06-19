@@ -1,3 +1,5 @@
+# 🚷 Skip this; not compatible 🏗️
+
 # Module 3a: Motor Control - Basic Movement with L298N
 
 In this module, you will take the first steps towards making your robot move! We will focus on the fundamental task of connecting and controlling DC motors using the **L298N Motor Driver Module**. The goal for this module is to understand how to make your robot move **forward** and **reverse** in a straight line.
