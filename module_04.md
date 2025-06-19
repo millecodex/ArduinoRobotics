@@ -29,8 +29,7 @@ The SG90 is a popular and inexpensive micro servo motor, ideal for beginners. It
 * **GND (Brown or Black):** Connect this wire to any GND (Ground) pin on the Arduino. This completes the circuit.  
 * **Signal (Orange or Yellow):** Connect this wire to any digital I/O pin on the Arduino. While any digital pin can be used, it's common practice to use a PWM-capable pin (like pin 9\) for smoother operation, though the Servo library handles the PWM generation internally.
 
-Diagram Description:  
-Imagine your Arduino Uno board connected to an SG90 servo motor. The red wire from the servo is connected to the 5V pin on the Arduino. The brown/black wire from the servo is connected to a GND pin on the Arduino. The orange/yellow signal wire from the servo is connected to Arduino's Digital Pin 9\.
+![image](https://github.com/user-attachments/assets/125dd5d5-ae35-403b-adc3-069b4db6bdf7)
 
 ## **Controlling the Servo with the Servo Library**
 
