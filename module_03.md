@@ -75,32 +75,24 @@ For now, we'll assume a constant "full speed" by implicitly powering the L298N's
 // Define the pins connected to the L298N driver for Motor 1
 const int motor1Input1 = 7; // IN1 on L298N
 const int motor1Input2 = 8; // IN2 on L298N
-const int motor1Enable = 9; // ENA on L298N (connected HIGH for full speed in this module)
 
 // Define the pins connected to the L298N driver for Motor 2
 const int motor2Input3 = 5; // IN3 on L298N
 const int motor2Input4 = 6; // IN4 on L298N
-const int motor2Enable = 10; // ENB on L298N (connected HIGH for full speed in this module)
 
+// comment here about what it is
 void setup() {
   // Set all motor control pins as OUTPUT
   pinMode(motor1Input1, OUTPUT);
   pinMode(motor1Input2, OUTPUT);
-  pinMode(motor1Enable, OUTPUT); // ENA is an OUTPUT for control
-
+  
   pinMode(motor2Input3, OUTPUT);
   pinMode(motor2Input4, OUTPUT);
-  pinMode(motor2Enable, OUTPUT); // ENB is an OUTPUT for control
-
+  
   // Initialize Serial communication for debugging messages
   Serial.begin(9600);
   Serial.println("Module 3a: Basic L298N Motor Movement");
-
-  // Ensure enable pins are HIGH for full speed (no PWM for now)
-  digitalWrite(motor1Enable, HIGH);
-  digitalWrite(motor2Enable, HIGH);
-
-  // Initially stop both motors
+ // Initially stop both motors
   stopMotors();
 }
 
@@ -120,6 +112,7 @@ void loop() {
   Serial.println("Stopping...");
   stopMotors();
   delay(1000); // Stop for 1 second
+  
 }
 
 // Function to make both motors move forward
