@@ -4,24 +4,7 @@ Congratulations on reaching Module 5! At this stage, you have successfully contr
 
 ## The Robotic Platform: Assembling Your Car
 
-While the specific chassis design may vary, the core components for a simple two-wheel drive robotic car typically include:
-
-* **Chassis:** The frame of your robot, often made of acrylic, plastic, or metal.
-* **DC Motors (2x):** For driving the wheels.
-* **Wheels (2x):** Connected to the DC motors.
-* **Caster Wheel/Skid (1x):** A free-rolling wheel or a simple skid at the front or back to provide stability and allow for easy turning.
-* **Arduino Uno Board:** The microcontroller brain of your robot.
-* **L298N Motor Driver Module:** To power and control the DC motors.
-* **Ultrasonic Sensor (e.g., HC-SR04):** For obstacle detection.
-* **SG90 Micro Servo Motor:** To allow the ultrasonic sensor to scan its surroundings.
-* **External Power Supply:** A battery pack (e.g., 4x AA batteries for 6V, or a 9V battery) to power the L298N module and motors.
-* **Breadboard:** A small one may be useful for organizing sensor connections if needed.
-* **Jumper Wires:** For all electrical connections.
-
-
-## Integrated Circuit Diagram: Bringing it All Together
-
-This diagram describes the complete electrical connections for your autonomous obstacle-avoiding robot, integrating all the components from previous modules.
+This diagram describes the complete electrical connections for your autonomous obstacle-avoiding robot, integrating all the components from previous modules. (Some of the pin numbers may be different to yours.)
 
 ![Pasted Graphic 8](https://github.com/user-attachments/assets/ecdeba8f-d9de-445a-85fd-dd52f4eb84d5)
 
@@ -57,7 +40,11 @@ This diagram describes the complete electrical connections for your autonomous o
     * SG90 `Brown/Black` (GND) wire to Arduino `GND`.
     * SG90 `Orange/Yellow` (Signal) wire to Arduino Digital Pin 9 (often a PWM pin, but the Servo library handles it).
 
-By carefully following these connections, you will have a fully wired robotic platform ready for the autonomous algorithms in the next module. Remember to double-check all polarities and connections before powering up!
+By carefully following these connections, you will have a fully wired robotic platform ready for the autonomous algorithms in the next module. Remember to double-check all connections before powering up!
+
+![image](https://github.com/user-attachments/assets/3f80f2f5-baff-4169-a4e6-aae2b529f31a)
+
+> Quite a nest of wires! Perhaps you can have better wire management and organisation thank me
 
 ---
 NEXT ➡️ You are now ready to move on to [Module 6](./module_06.md), algorithm design and optimization!
