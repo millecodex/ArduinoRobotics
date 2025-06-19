@@ -7,6 +7,9 @@ Before we can start building robots and writing code to control them, we need to
 **What is an Arduino?**
 An Arduino is a microcontroller board. Think of it as a tiny, programmable computer that can interact with the physical world through sensors and actuators (like LEDs, motors, etc.). The "brain" of the Arduino Uno, a popular board for beginners, is typically an ATmega328P microcontroller.
 
+![image](https://github.com/user-attachments/assets/0935e10c-5756-4e78-9554-39bcda2e3a88)
+
+
 **Fun Fact:** The open-source nature of Arduino means that not only is the software free to use and modify, but the hardware designs are also openly available. This has led to a massive community of users, a wide variety of "clone" boards, and an incredible number of shared projects and libraries.
 
 ## Step 1: Download and Install the Arduino IDE
