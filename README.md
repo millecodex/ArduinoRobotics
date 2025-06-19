@@ -36,9 +36,6 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - Introduction to DC motors
 - Calibrating rotation direction
 
-### [Module 3b: Analog Speed Control with Pulse Width Modulation (PWM)](module_03b.md)
-- Time permitting this module may be skipped
-
 ### [Module 4: Precision Movement - Servo Control](module_04.md)
 - Introduction to servo motors
 - Interfacing with an SG90 servo motor
