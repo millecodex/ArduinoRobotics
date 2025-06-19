@@ -67,6 +67,9 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 - A robot car chassis (or materials to build one)
 - A separate power supply for motors (e.g., a battery pack)
 
+![image](https://github.com/user-attachments/assets/69438aa5-b7c5-4580-8d61-d1660f682205)
+
+
 ---
 
 Let's begin with [**Module 0**](module_00.md) and bring your Arduino board to life!
