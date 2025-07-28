@@ -71,5 +71,8 @@ We hope you find this course engaging and rewarding. Let's get started on our jo
 
 
 ---
-
 Let's begin with [**Module 0**](module_00.md) and bring your Arduino board to life!
+
+---
+![image](https://github.com/user-attachments/assets/2bb39f17-db0a-4fe2-98c2-20afd9bac040)
+
